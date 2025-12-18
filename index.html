@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harendra Kumar - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <canvas id="starfield"></canvas>
+    <div class="nebula"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="moon-icon">🌙</span>
+        <span class="sun-icon">☀️</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">HK</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#profiles" class="nav-link">Coding Profiles</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">👋 Hello, I'm</div>
+                <h1 class="hero-title">Harendra Kumar</h1>
+                <div class="hero-text-animation">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-subtitle">Computer Science & Engineering Student at IIT Patna. Passionate about competitive programming, algorithmic problem-solving, and building innovative solutions.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>View Projects</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="image.jpeg" alt="Harendra Kumar" class="profile-image">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">A glimpse into my journey</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a Computer Science student at <span class="highlight">IIT Patna</span> with a deep passion for competitive programming and algorithmic problem-solving. My journey in tech began with curiosity about how things work, and has evolved into a commitment to mastering data structures and algorithms.</p>
+                    <p>When I'm not coding, you'll find me participating in coding contests on platforms like <span class="highlight">Codeforces</span>, <span class="highlight">CodeChef</span>, and <span class="highlight">LeetCode</span>, constantly challenging myself to think differently and optimize solutions.</p>
+                    <p>I believe in continuous learning and pushing boundaries, which has helped me solve <span class="highlight">650+ problems</span> across various platforms and achieve notable rankings in competitive programming contests.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-number" data-target="650">0</div>
+                        <div class="stat-label">Problems Solved</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number" data-target="1688">0</div>
+                        <div class="stat-label">Max LeetCode Rating</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number" data-target="1207">0</div>
+                        <div class="stat-label">Max CF Rating</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-number">2⭐</div>
+                        <div class="stat-label">CodeChef Stars</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <p class="section-subtitle">Technologies I work with</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">Web Technologies</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📚</div>
+                    <h3 class="skill-title">Core Subjects</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">Discrete Math</span>
+                        <span class="skill-tag">AI</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🖥️</div>
+                    <h3 class="skill-title">Operating Systems</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">MacOS</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coding Profiles Section -->
+    <section class="section profiles-section" id="profiles">
+        <div class="container">
+            <h2 class="section-title">Coding Profiles</h2>
+            <p class="section-subtitle">My competitive programming journey</p>
+            <div class="profile-grid">
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="platform-icon">🔷</div>
+                        <div class="platform-name">Codeforces</div>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="rating-info">
+                            <span class="rating-label">Current</span>
+                            <span class="current-rating" id="cf-current">Loading...</span>
+                        </div>
+                        <div class="rating-info">
+                            <span class="rating-label">Max</span>
+                            <span class="max-rating" id="cf-max">--</span>
+                        </div>
+                    </div>
+                    <div class="rank-badge" id="cf-rank">Pupil</div>
+                    <a href="https://codeforces.com/profile/Harendra_Kumar" target="_blank" class="profile-link">
+                        <span>View Profile</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="platform-icon">🟤</div>
+                        <div class="platform-name">CodeChef</div>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="rating-info">
+                            <span class="rating-label">Current</span>
+                            <span class="current-rating" id="cc-current">1502</span>
+                        </div>
+                        <div class="rating-info">
+                            <span class="rating-label">Max</span>
+                            <span class="max-rating" id="cc-max">1502</span>
+                        </div>
+                    </div>
+                    <div class="rank-badge">2⭐ Star Coder</div>
+                    <a href="https://www.codechef.com/users/harendra_kumar" target="_blank" class="profile-link">
+                        <span>View Profile</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="platform-icon">🟡</div>
+                        <div class="platform-name">LeetCode</div>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="rating-info">
+                            <span class="rating-label">Current</span>
+                            <span class="current-rating" id="lc-current">Loading...</span>
+                        </div>
+                        <div class="rating-info">
+                            <span class="rating-label">Max</span>
+                            <span class="max-rating" id="lc-max">1688</span>
+                        </div>
+                    </div><br><br><br>
+                    <!-- <div class="rank-badge" id="lc-rank">Knight</div> -->
+                    <a href="https://leetcode.com/u/harendra-kumar" target="_blank" class="profile-link">
+                        <span>View Profile</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="accomplishments">
+                <h3 class="accomplishments-title">🏅 Key Accomplishments</h3>
+                <div class="accomplishments-list">
+                    <div class="accomplishment-item">
+                        <span class="accomplishment-icon">🎯</span>
+                        <span class="accomplishment-text">Secured <strong>Rank 1030</strong> among <strong>26,000+ participants</strong> in Leetcode Weekly Contest 479</span>
+                    </div>
+                    <div class="accomplishment-item">
+                        <span class="accomplishment-icon">🏆</span>
+                        <span class="accomplishment-text">Secured <strong>Rank 382</strong> among <strong>3,100+ participants</strong> in CodeChef Starters 217 (Div 3)</span>
+                    </div>
+                    <div class="accomplishment-item">
+                        <span class="accomplishment-icon">💪</span>
+                        <span class="accomplishment-text">Solved around <strong>650+ problems</strong> across platforms.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Things I've built</p>
+            
+            <!-- Project 01 -->
+            <div class="project-card">
+                <div class="project-number">01</div>
+                <div class="project-content">
+                    <div class="project-label">Web Development</div>
+                    <h3 class="project-title">Open Photography</h3>
+                    <p class="project-desc">A modern photography showcase platform featuring elegant design, smooth animations, and responsive layouts. Built with vanilla HTML, CSS, and JavaScript to demonstrate frontend development skills and attention to detail in UI/UX design.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <a href="https://harendra-kumar06.github.io/Open-Photography/" target="_blank" class="project-link">
+                        <span>View Project</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 02 -->
+            <div class="project-card">
+                <div class="project-number">02</div>
+                <div class="project-content">
+                    <div class="project-label">Web Development & API Integration</div>
+                    <h3 class="project-title">Dynamic Developer Portfolio</h3>
+                    <p class="project-desc">A professional personal brand platform featuring an animated starfield background, a customized theme-toggle, and real-time coding profile updates. I integrated external APIs to ensure my competitive programming ratings are always current without manual edits.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript (ES6+)</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">CSS3 Animations</span>
+                    </div>
+                    <a href="https://github.com/Harendra-Kumar06" target="_blank" class="project-link">
+                        <span>View Source Code</span>
+                        <span class="link-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="section resume-section" id="resume">
+        <div class="container">
+            <div class="resume-content">
+                <div class="resume-icon">📄</div>
+                <h2 class="section-title">Download My Resume</h2>
+                <p class="section-subtitle">Get a comprehensive overview of my skills, experience, and accomplishments</p>
+                <a href="resume.pdf" download class="btn btn-download">
+                    <span>Download Resume</span>
+                    <span class="download-icon">⬇</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Feel free to reach out</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3 class="contact-title">Email</h3>
+                    <a href="mailto:harendrarajput9627@gmail.com" class="contact-link">harendrarajput9627@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3 class="contact-title">LinkedIn</h3>
+                    <a href="https://linkedin.com/in/harendra-kumar-iitp" target="_blank" class="contact-link">harendra-kumar-iitp</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💻</div>
+                    <h3 class="contact-title">GitHub</h3>
+                    <a href="https://github.com/Harendra-Kumar06" target="_blank" class="contact-link">Harendra-Kumar06</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3 class="contact-title">Phone</h3>
+                    <a href="tel:+918218119185" class="contact-link">+91 8218119185</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Harendra Kumar. Built with passion and precision.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Harendra-Kumar06" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/harendra-kumar-iitp"           target="_blank">LinkedIn</a>
+                <a href="mailto:harendrarajput9627@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
