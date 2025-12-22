@@ -150,29 +150,62 @@ async function updateRatings() {
         const data = await response.json();
         if (data.status === "OK") {
             const user = data.result[0];
+            
+            // Update Profile Cards
             document.getElementById('cf-current').innerText = user.rating;
             document.getElementById('cf-max').innerText = user.maxRating;
             document.getElementById('cf-rank').innerText = user.rank.charAt(0).toUpperCase() + user.rank.slice(1);
+            
+            // UPDATE ABOUT SECTION DATA-TARGET
+            const aboutCF = document.getElementById('about-cf-rating');
+            if (aboutCF) {
+                aboutCF.setAttribute('data-target', user.maxRating);
+                startCounter(aboutCF);
+            }
         }
     } catch (error) {
         console.log("CF Error:", error);
-        document.getElementById('cf-current').innerText = "1195"; // Fallback if API fails
     }
 
-    // 2. Fetch LeetCode Data (Using a community API)
+    // 2. Fetch LeetCode Data
     try {
         const response = await fetch('https://alfa-leetcode-api.onrender.com/harendra-kumar/contest');
         const data = await response.json();
         if (data && data.contestRating) {
-            document.getElementById('lc-current').innerText = Math.floor(data.contestRating);
-            document.getElementById('lc-max').innerText = Math.floor(data.contestRating); // Max rating usually needs a different endpoint or calculation
-            document.getElementById('lc-rank').innerText = data.badge || "Knight";
+            const rating = Math.floor(data.contestRating);
+            
+            // Update Profile Card
+            document.getElementById('lc-current').innerText = rating;
+            
+            // UPDATE ABOUT SECTION DATA-TARGET
+            const aboutLC = document.getElementById('about-lc-rating');
+            if (aboutLC) {
+                aboutLC.setAttribute('data-target', rating);
+                startCounter(aboutLC); 
+            }
         }
     } catch (error) {
         console.log("LC Error:", error);
-        document.getElementById('lc-current').innerText = "1688"; // Fallback
     }
 }
 
-// Run the function when the page loads
+// to run the counter animation
+function startCounter(el) {
+    const target = +el.getAttribute('data-target');
+    let count = 0;
+    const speed = target / 100;
+
+    const updateCount = () => {
+        if (count < target) {
+            count += speed;
+            el.innerText = Math.ceil(count);
+            setTimeout(updateCount, 20);
+        } else {
+            el.innerText = target;
+        }
+    };
+    updateCount();
+}
+
+// Ensure it runs on load
 window.addEventListener('DOMContentLoaded', updateRatings);
